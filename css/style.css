@@ -1,0 +1,1186 @@
+@font-face {
+    font-display: swap; 
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/Poppins-Regular.ttf') format('truetype'); 
+  }
+@font-face {
+    font-display: swap; 
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/Poppins-Medium.ttf') format('truetype'); 
+}
+@font-face {
+    font-display: swap; 
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/Poppins-SemiBold.ttf') format('truetype'); 
+}
+@font-face {
+    font-display: swap; 
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/Poppins-Bold.ttf') format('truetype'); 
+}
+
+html {
+    background: #1F1D2B;
+}
+
+/* header */
+
+.header {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+.header__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 88px;
+}
+
+/* BURGER MENU */
+
+.burger-menu {
+    width: 865px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.burger-icon {
+    display: none; 
+}
+.bar {
+    width: 25px;
+    height: 3px;
+    background: var(--Linear-Purple-Blue-Style, linear-gradient(94deg, #9B51E0 2.84%, #3081ED 99.18%));
+    margin: 5px 0;
+    transition: 0.5s;
+}
+.burger-menu.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+    width: 100%;
+    top: 10vh;
+    height: 90vh;
+    background: #1F1D2B;
+    z-index: 2;
+}
+.burger-icon.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+.burger-icon.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.burger-icon.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-6px, -6px);
+}
+.header__navigation-list {
+    display: flex;
+    gap: 32px;
+    color: #BCBCBC;
+}
+.header__navigation-list-link {
+    text-decoration: none;
+    color: #BCBCBC;
+}
+.header__navigation-list-text {
+    font-family: 'Poppins';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    position: relative; 
+}
+.header__navigation-list-text::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0; 
+    height: 3px; 
+    background: var(--Linear-Purple-Blue-Style, linear-gradient(94deg, #9B51E0 2.84%, #3081ED 99.18%));
+    transition: width 0.5s; 
+}
+.header__navigation-list-text:hover::before {
+    width: 100%; 
+}
+.header__navigation-list-text:hover {
+    background: var(--Linear-Purple-Blue-Style, linear-gradient(94deg, #9B51E0 2.84%, #3081ED 99.18%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} 
+.header__navigation-buttons {
+    width: 211px;
+    height: 45px;
+    flex-shrink: 0;
+    gap: 32px;
+    display: flex;
+}
+.header__navigation-buttons-create {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 126px;
+    height: 45px;
+    flex-shrink: 0;
+    border: 1px solid #D7D7D7;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.header__navigation-buttons-sign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    text-decoration: none;
+}
+.header__navigation-buttons-create-text, .header__navigation-buttons-sign-text  {
+    color: #BCBCBC;
+    font-family: 'Poppins';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* main information */
+
+.main {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 135px;
+}
+.main__information {
+    display: flex;
+    gap: 138px;
+}
+.main__information-block__title {
+    width: 637px;
+    color: #FFF;
+    font-family: 'Poppins';
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 82px; 
+    letter-spacing: -2px;
+    margin-top: 10px;
+}
+.main__information-block__description {
+    width: 637px;
+    color: #E2E2E2;
+    font-family: 'Poppins';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px; 
+    letter-spacing: 0.5px;
+    margin-top: 25px;
+}
+.main__information-block__buttons {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+}
+.main__information-block__buttons-explore {
+    display: flex;
+    width: 218px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 16px;
+    background: linear-gradient(104deg, #9B51E0 21.01%, rgba(48, 129, 237, 0.80) 100%);
+    text-decoration: none;
+}
+.main__information-block__buttons-explore-text {
+    color: #FFF;
+    font-family: 'Poppins';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: -1px;
+}
+.main__information-block__buttons-create {
+    display: flex;
+    width: 218px;
+    padding: 12px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 16px;
+    border: 1px solid #D7D7D7;
+    text-decoration: none;
+}
+.main__information-block__buttons-create-text {
+    color: #D7D7D7;
+    font-family: 'Poppins';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px; 
+    letter-spacing: -1px;
+}
+.main__information-block--image {
+    width: 504px;
+    height: 585px;
+    flex-shrink: 0;
+    border-radius: 35.025px;
+    background: linear-gradient(169deg, rgba(58, 129, 191, 0.08) 1.85%, rgba(65, 48, 90, 0.08) 98.72%);
+    backdrop-filter: blur(555px);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 33px;
+}
+.main__information-block__image {
+    width: 447px;
+    height: 448px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    position: relative;
+
+}
+.main__information-block__container {
+    display: flex;
+    gap: 200px;
+}
+.main__information-block__sub-block {
+    display: flex;
+    gap: 15px;
+}
+.main__information-block__sub-block-avatar {
+    width: 53px;
+    height: 53px;
+    flex-shrink: 0;
+    border-radius: 53px;
+}
+.main__information-block__sub-block-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.main__information-block__sub-block-info-text-name {
+    color: #FFF;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; 
+}
+.main__information-block__sub-block-info-text {
+    color: #D7D7D7;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+.main__information-block__sub-block-text {
+    color: #FFF;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; 
+}
+.main__information-block__sub-block-heart-image {
+    display: flex;
+    justify-content: end;
+    gap: 5px;
+}
+.main__information-block__sub-block-heart-text {
+    color: var(--Gray-5, #E0E0E0);
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; 
+}
+.ellipse-pink {
+    position: absolute;    
+    right: 220px;
+    bottom: 280px;
+}
+
+/* main auctions */
+
+.main__auctions {
+    margin-top: 155px;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+.main__auctions-raundabout {
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main__auctions-raundabout-title {
+    height: 100%;
+    display: flex;    
+}
+.main__auctions-raundabout-title-text {
+    color: #FFF;
+    font-family: 'Poppins';
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 72px; 
+    letter-spacing: -1px;
+}
+.main__auctions-raundabout-menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.main__auctions-raundabout-menu-text {
+    color: #D7D7D7;
+    font-family: 'Poppins';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px; 
+    letter-spacing: -1px;
+}
+.main__auctions-block {
+    display: flex;
+    gap: 25px;
+}
+.main__auctions-block-cards {
+    width: 300px;
+}
+.main__auctions-cards-title {
+    display: flex;
+    align-items: end;
+    height: 50px;
+    justify-content: space-between;
+}
+.main__auctions-cards-title-first-description {
+    color: #FFF;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; 
+}
+.main__auctions-cards-title-second-description {
+    color: #FFF;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; 
+}
+.main__auctions-hr {
+    stroke-width: 1px;
+    stroke: #C4C4C4;
+    margin-top: 10px;
+}
+.main__auctions-cards-bottom {
+    height: 50px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+.main__auctions-cards-bottom-description{
+    color: #FFF;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+.main__auctions-cards-bottom-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 73px;
+    height: 29px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 1px solid #E2E2E2;
+}
+.main__auctions-cards-bottom-buttom-text {
+    color: #E2E2E2;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; 
+}
+
+/* main-started */
+
+.main__started {
+    margin-top: 165px;
+    height: 440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main__started-title {
+    color: #FFF;
+    font-family: 'Poppins';
+    font-size: 48px;
+    font-style: normal; 
+    font-weight: 500;
+    line-height: 72px; 
+    letter-spacing: -1px;
+}
+.main__started-description {
+    color: #E2E2E2;
+    font-family: 'Poppins';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px; 
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+}
+.main__started-group {
+    max-width: 1292px;
+    width: 100%;
+    height: 53px; 
+    flex-shrink: 0;
+    margin-top: 140px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+.background-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--Linear-Purple-Blue-Style, linear-gradient(94deg, #9B51E0 2.84%, #3081ED 99.18%));
+    filter: blur(100px);
+    z-index: -1; 
+}
+.main__started-group__element {
+    height: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.image-container {
+    width: 150px;
+    height: 138px;  
+    flex-shrink: 0;
+    border-radius: 26px;
+    background: rgba(255, 255, 255, 0.09);
+    box-shadow: -3.01333px 3.01333px 3.01333px 0px rgba(255, 255, 255, 0.39) inset, 2.01px -2.01px 20px 0px rgba(214, 214, 214, 0.17) inset;
+    backdrop-filter: blur(37.21466827392578px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image-container-description-shield {
+    color: #FFF;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; 
+    position: relative;
+    padding-top: 25px;
+}
+.image-container-description-archive {
+    width: 191px;
+    color: #FFF;
+    text-align: center; 
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    padding-top: 25px;
+}
+.image-container-description-media {
+    width: 172px;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Poppins'; 
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; 
+    padding-top: 25px;
+}
+.image-container-description-rocket {
+    width: 173px;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    padding-top: 25px;
+}
+
+    /* main discover */
+
+.main__discover {
+    margin-top: 175px;
+    width: 100%;
+}
+.main__discover-filter {
+    height: 50px;
+    display: flex;
+    gap: 380px;
+}
+.main__discover-filter__title {
+    color: #FFF;
+    font-family: 'Poppins';
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: -1px;
+}
+.main__discover-filter__buttons {
+    display: flex;
+    gap: 43px;
+}
+.main__discover-filter__buttons-category, .main__discover-filter__buttons-cheapest, .main__discover-filter__buttons-newest  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.main__discover-filter__buttons-category-text, .main__discover-filter__buttons-cheapest-text, .main__discover-filter__buttons-newest-text, .main__discover-filter__buttons-filter-text  {
+    color: #FFF;
+    font-family: 'Poppins';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px; 
+    letter-spacing: -1px;
+}
+.main__discover-filter__buttons-filter {
+    width: 167.488px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: var(--Linear-Purple-Blue-Style, linear-gradient(94deg, #9B51E0 2.84%, #3081ED 99.18%));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-decoration: none;
+}
+.main__filter-block {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 83px;
+    gap: 29px;
+}
+.main__filter-block__cards {
+    margin-bottom: 45px;
+}
+.main__discover-button {
+    width: 161px;
+    height: 45px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid #D7D7D7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin: 0 auto;
+    margin-top: 33px;
+}
+.main__discover-button-text {
+    color: #BCBCBC;
+    font-family: 'Poppins';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+    /* footer */
+
+.footer {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}    
+.footer__main-info {
+    width: 100%;
+    display: flex;
+    gap: 120px;
+    margin-top: 160px;
+}
+.footer__title {
+    width: 455.111px;
+    color: #FFF;
+    font-family: 'Poppins';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.footer__links {
+    display: flex;
+    gap: 45px;
+}
+.footer__links-marcetplace, .footer__links-company, .footer__links-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+.footer__links-marcetplace-title, .footer__links-company-title, .footer__links-contact-title {
+    color: #FFF;
+    font-family: 'Poppins';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.footer__links-marcetplace-home, .footer__links-marcetplace-activity, .footer__links-marcetplace-discover, .footer__links-marcetplace-learn, .footer__links-company-about, .footer__links-company-services, .footer__links-company-portfolio, .footer__links-contact-facebook, .footer__links-contact-instagram, .footer__links-contact-twitter, .footer__links-contact-email {
+    text-decoration: none;
+}
+.footer__links-marcetplace-home-text, .footer__links-marcetplace-activity-text, .footer__links-marcetplace-discover-text, .footer__links-marcetplace-learn-text, .footer__links-company-about-text, .footer__links-company-services-text, .footer__links-company-portfolio-text, .footer__links-contact-facebook-text, .footer__links-contact-instagram-text, .footer__links-contact-twitter-text, .footer__links-contact-email-text {
+    width: 75.175px;
+    color: #D7D7D7;
+    font-family: 'Poppins';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.72px;
+}
+.footer__links-marcetplace-learn-text {
+    width: 145px;
+}
+.footer__links-company-about-text {
+    width: 114.794px;
+}
+.footer__hr {
+    max-width: 1280px;
+    width: 100%;
+    height: 1px;
+    background: #F2F2F2;
+    margin-top: 40px;
+}
+.footer__coppyright {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+.footer__coppyright-social {
+    display: flex;
+    gap: 25px;
+}
+.footer__coppyright-text {
+    color: var(--Gray-3, #828282);
+    font-family: 'Poppins';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+@media only screen and (max-width: 767px) {
+
+    /* header */
+
+    .burger-icon {
+        display: block; 
+    }
+    .burger-menu {
+        display: none; 
+    }
+    .header {
+        width: 100%;
+    }
+    .header__navigation {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 88px;
+    }
+    .header__navigation-logo {
+        width: 100px;
+    }
+    .header__navigation-list {
+        width: 100%;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 42px;
+    }
+    .header__navigation-list-text {
+        font-size: 20px;
+    }
+    .header__navigation-buttons {
+        width: 100%;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 200px;
+    }
+    .header__navigation-buttons-create {
+        width: 50%;
+        height: 45px;
+        flex-shrink: 0;
+        border: 1px solid #D7D7D7;
+        border-radius: 10px;
+        text-decoration: none;
+    }
+    .header__navigation-buttons-sign {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header__navigation-buttons-create-text, .header__navigation-buttons-sign-text  {
+        font-size: 20px;
+        line-height: 22px;
+        letter-spacing: 1.5px;
+    }
+
+    /* main information */
+
+    .main {
+        width: 100%;
+        margin-top: 0px;
+    }
+    .main__information {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 38px;
+    }
+    .main__information-block__title {
+        width: 100%;
+        font-size: 20px;
+        line-height: 40px; 
+        letter-spacing: 0px;
+        margin-top: 1px;
+        text-align: center;
+    }
+    .main__information-block__description {
+        width: 100%;
+        font-size: 16px;
+        line-height: 40px; 
+        letter-spacing: 0px;
+        margin-top: 1px;
+        text-align: center;
+    }
+    .main__information-block__buttons {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    .main__information-block__buttons-explore {
+        width: 45%;
+        gap: 10px;
+        border-radius: 16px;
+    }
+    .main__information-block__buttons-explore-text {
+        font-size: 18px;
+        letter-spacing: 0.1px;
+    }
+    .main__information-block__buttons-create {
+        width: 45%;
+    }
+    .main__information-block__buttons-create-text {
+        font-size: 18px;
+        letter-spacing: 0.1px;
+    }
+    .main__information-block--image {
+        width: 100%;
+        gap: 33px;
+    }
+    .main__information-block__image {
+        width: 90%;
+    }
+    .main__information-block__container {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+    }
+    .main__information-block__sub-block {
+        display: flex;
+        gap: 5px;
+    }
+    .main__information-block__sub-block-info {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .main__information-block__sub-block-info-text-name {
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px; 
+    }
+    .main__information-block__sub-block-info-text, .main__information-block__sub-block-text, .main__information-block__sub-block-heart-text {
+        font-size: 12px;
+    }
+    .ellipse-pink {
+        display: none;
+    }
+
+    /* main auctions */
+
+    .main__auctions {
+        width: 100%;
+        margin-top: 30px;
+        gap: 1px;
+    }
+    .main__auctions-raundabout {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+    }
+    .main__auctions-raundabout-title-text, .main__auctions-raundabout-menu-text {
+        font-size: 20px;
+    }
+    .main__auctions-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    /* main-started */
+
+    .main__started {
+        width: 100%;
+        margin-top: 50px;
+    }
+    .main__started-title {
+        width: 100%;
+        font-size: 24px;
+        text-align: center;
+    }
+    .main__started-description {
+        width: 100%;
+        font-size: 18px;
+        margin-top: 20px;
+        text-align: center;
+    }
+    .main__started-group {
+        width: 100%;
+        margin-top: 500px;
+        flex-direction: column;
+        gap: 70px;
+    }
+    .background-blur {
+        display: none;
+    }
+    
+    /* main discover */
+
+    .main__discover {
+        margin-top: 900px;
+        width: 100%;
+    }
+    .main__discover-filter {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .main__discover-filter__title {
+        font-size: 20px;
+    }
+    .main__discover-filter__buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .main__discover-filter__buttons-category, .main__discover-filter__buttons-cheapest, .main__discover-filter__buttons-newest  {
+        gap: 10px;
+    }
+    .main__discover-filter__buttons-category-text, .main__discover-filter__buttons-cheapest-text, .main__discover-filter__buttons-newest-text, .main__discover-filter__buttons-filter-text  {
+        font-size: 12px;
+    }
+    .main__filter-block {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 120px;
+        gap: 15px;
+    }
+    .main__filter-block__cards {
+        margin-bottom: 45px;
+    }
+    .main__discover-button {
+        width: 161px;
+        margin: 0 auto;
+        margin-top: 1px;
+    }
+
+   /* footer */
+
+   .footer {
+        width: 100%;
+    }    
+    .footer__main-info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 30px;
+    }
+    .footer__title {
+        width: 100%;
+        text-align: center;
+        font-size: 20px;
+    }
+    .footer__links {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 1px;
+    }
+    .footer__links-marcetplace-title, .footer__links-company-title, .footer__links-contact-title {
+        font-size: 20px;
+    }
+    .footer__links-marcetplace-home-text, .footer__links-marcetplace-activity-text, .footer__links-marcetplace-discover-text, .footer__links-marcetplace-learn-text, .footer__links-company-about-text, .footer__links-company-services-text, .footer__links-company-portfolio-text, .footer__links-contact-facebook-text, .footer__links-contact-instagram-text, .footer__links-contact-twitter-text, .footer__links-contact-email-text {
+        font-size: 12px;
+    }
+    .footer__hr {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .footer__coppyright {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+    }
+    .footer__coppyright-social {
+        display: flex;
+        gap: 1px;
+    }
+    .footer__coppyright-text {
+        font-size: 12px;
+    }
+    .footer__coppyright-social-instagram-icon, .footer__coppyright-social-facebook-image, .footer__coppyright-social-twitter-image {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    /* header */
+
+    .header {
+        width: 100%;
+    }
+    .header__navigation {
+        height: 88px;
+    }
+    .burger-menu {
+        width: 75%;
+    }
+    .header__navigation-list {
+        gap: 10px;
+    }
+    .header__navigation-list-text {
+        font-size: 12px;
+    }    
+    .header__navigation-list-text {
+        letter-spacing: 1px;
+    }
+    .header__navigation-buttons {
+        width: 211px;
+        gap: 22px;
+    }
+    
+    /* main information */
+    
+    .main {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .main__information {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .main__information-block {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main__information-block__title {
+        width: 100%;
+        font-size: 40px;
+        text-align: center;
+        margin-top: 0px;
+    }
+    .main__information-block__description {
+        text-align: center;
+        width: 100%;
+        font-size: 24px;
+        line-height: 36px; 
+        margin-top: 5px;
+    }
+    .main__information-block--image {
+        width: 504px;
+    }
+
+    /* main auctions */
+
+    .main__auctions {
+        width: 100%;
+        margin-top: 30px;
+        gap: 1px;
+    }
+    .main__auctions-raundabout {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 280px;
+    }
+    .main__auctions-raundabout-title-text, .main__auctions-raundabout-menu-text {
+        font-size: 20px;
+    }
+    .main__auctions-block {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap; 
+        align-items: center;
+        gap: 50px;
+    }
+
+    /* main-started */
+
+    .main__started {
+        width: 100%;
+        margin-top: 50px;
+    }
+    .main__started-title {
+        width: 100%;
+        text-align: center;
+        font-size: 44px;
+    }
+    .main__started-description {
+        width: 100%;
+        text-align: center;
+        font-size: 22px;
+    }
+    .main__started-group {
+        width: 100%;
+    }
+    .background-blur {
+        width: 100%;
+    }
+    .main__started-group__element {
+        width: 100%;
+    }   
+
+    /* main discover */
+
+    .main__discover {
+        margin-top: 50px;
+        width: 100%;
+    }
+    .main__discover-filter {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+    .main__discover-filter__title {
+        font-size: 40px;
+    }
+    .main__discover-filter__buttons {
+        display: flex;
+        gap: 20px;
+    }
+    .main__discover-filter__buttons-category, .main__discover-filter__buttons-cheapest, .main__discover-filter__buttons-newest  {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .main__discover-filter__buttons-category-text, .main__discover-filter__buttons-cheapest-text, .main__discover-filter__buttons-newest-text, .main__discover-filter__buttons-filter-text  {
+        font-size: 18px;
+    }
+    .main__filter-block {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+    .main__discover-button {
+        margin-top: 5px;
+    }
+
+    /* footer */
+
+    .footer {
+        width: 100%;
+    }    
+    .footer__main-info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 20px;
+    }
+    .footer__title {
+        width: 100%;
+        text-align: center;
+        font-size: 40px;
+        margin-top: 50px;
+    }
+    .footer__links {
+        display: flex;
+        justify-content: center;
+    }
+    .footer__hr {
+        width: 100%;
+    }
+}
+
